@@ -10,7 +10,7 @@
     <script>
       const spec = {
         $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-        title: "COVID-19 Active Cases (10 Oct 2020)",
+        title: "Global emmision by country",
         width: 800,
         height: 500,
         data: {
@@ -36,7 +36,7 @@
                 lookup: "properties.NAME",
                 from: {
                   data: {
-                    url: "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/homicide-data.csv",
+                    url: "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/GCB2022v27_MtCO2_flat.csv",
                   },
                   key: "Country",
                   fields: ["Active", "Confirmed", "Population"],
