@@ -11,7 +11,7 @@
       const spec = {
         $schema: "https://vega.github.io/schema/vega-lite/v5.json",
         title: "Global emmision by country in 2020",
-        width: 800,
+        width: 1200,
         height: 500,
         data: {
           url: "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/ne_110m_admin_0_countries.json",
@@ -39,12 +39,8 @@
                     url: "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/GCB2022v27_MtCO2_flat.csv",
                   },
                   key: "Country",
-                  fields: ["Active", "Confirmed", "Population"],
+                  fields: ["Global Emmision", "Year"],
                 },
-              },
-              {
-                calculate: "datum.Confirmed/datum.Population * 10000",
-                as: "Confirmed per 10,000 population",
               },
               { filter: "datum.Year == 2020" },
             ],
