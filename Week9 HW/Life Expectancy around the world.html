@@ -10,7 +10,7 @@
     <script>
       const spec = {
         $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-        title: "Life expectancy around the world(2015)",
+        title: "Life expectancy around the world(2000)",
         width: 1100,
         height: 500,
         data: {
@@ -42,7 +42,6 @@
                   fields: ["Life expectancy", "Year"],
                 },
               },
-              { filter: "datum.Year == 2015" },
             ],
             mark: { type: "geoshape", stroke: "white" },
             encoding: {
@@ -55,7 +54,7 @@
                 {
                   field: "Life expectancy",
                   type: "quantitative",
-                  title: "Life expectancy of people around the world in 2015",
+                  title: "Life expectancy of people around the world in 2000",
                 },
               ],
             },
