@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>My first HTML Document</title>
+    <title>Embedding Vega-Lite</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
+
+    <style>
+      .container {
+        width: 80%;
+        margin: 80px auto;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>Heading 3</h1>
-    <h2>1.1 Creating Paragraph (level 2)</h2>
-    <p>Unit FIT3179 Data visualisation</p>
-    <p>My First Paragraph</p>
+    <h1>Visualisation Project HW</h1>
+    <div class="container">
+      <h2>Life expectancy in the world</h2>
+      <div id="vis"></div>
 
-    <h2>1.2 Creating Tables(level 2)</h2>
-    <h3>1.2.1 table rows (level 3)</h3>
-    <p>this is a third paragraph of this shit</p>
+      <h2>correlation of schooling and Life expectancy</h2>
+      <div id="vis2"></div>
+    </div>
 
-    <h2>a picture of kittens</h2>
-    <img
-      src="https://i1.sndcdn.com/artworks-Ak4ZQscMVUvGsus8-LOmk9Q-t500x500.jpg"
-    />
-
-    <a href="https://lms.monash.edu/mod/forum/view.php?id=11900263"
-      >monash stuff</a
-    >
+    <script type="text/javascript">
+      vegaEmbed("#vis", "Week10 HW/week10.json");
+      vegaEmbed("#vis2", "Week10 HW/life_expectancy and school.json");
+    </script>
   </body>
 </html>

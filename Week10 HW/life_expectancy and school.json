@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 400,
+  "description": "A scatterplot showing horsepower and miles per gallons that opens a Google search for the car that you click on.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
+  },
+  "mark": "point",
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2015,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "Country_Status",
+      "value": "Developing",
+      "bind": { "input": "select", "options": ["Developing", "Developed"] }
+    }
+  ],
+
+  "transform": [
+    { "filter": "datum.Year == Year_selection" },
+    { "filter": "datum.Schooling > 0" },
+    { "filter": "datum.Status == Country_Status" }
+  ],
+  "encoding": {
+    "x": { "field": "Schooling", "type": "quantitative" },
+    "y": { "field": "Life expectancy", "type": "quantitative" },
+    "color": { "field": "Status", "type": "nominal" },
+    "tooltip": { "field": "Country", "type": "nominal" }
+  }
+}
