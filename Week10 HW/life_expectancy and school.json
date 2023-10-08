@@ -6,7 +6,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
   },
-  "mark": "point",
   "params": [
     {
       "name": "Year_selection",
