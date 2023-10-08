@@ -20,7 +20,7 @@
       }
     },
     {
-      "name": "Country Status",
+      "name": "Country_Status",
       "value": "Developing",
       "bind": { "input": "select", "options": ["Developing", "Developed"] }
     }
