@@ -22,7 +22,11 @@
     {
       "name": "Country_Status",
       "value": "Developing",
-      "bind": { "input": "select", "options": ["Developing", "Developed"] }
+      "bind": {
+        "input": "select",
+        "options": ["Developing", "Developed"],
+        "name": "Country Status"
+      }
     }
   ],
 
