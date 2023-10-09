@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embedding Vega-Lite</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: gray;
+      }
+      .container {
+        width: 80%;
+        margin: 80px auto;
+        background: white;
+        padding: 30px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      .vis {
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Factors that contributes to higher life expectancy per country</h1>
+    <div class="container">
+      <h2>Life expectancy in the world</h2>
+      <div id="vis" class="vis"></div>
+
+      <h2>correlation of schooling and Life expectancy</h2>
+      <div id="vis2" class="vis"></div>
+
+      <h3>Top average gdp Ranking</h3>
+      <div id="vis3" class="vis"></div>
+    </div>
+
+    <script type="text/javascript">
+      vegaEmbed("#vis", "week10.json");
+      vegaEmbed("#vis2", "life_expectancy and school.json");
+      vegaEmbed("#vis3", "average gpd rank.json");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "description": "A scatterplot showing horsepower and miles per gallons that opens a Google search for the car that you click on.",
+  "height": { "step": 17 },
+  "data": {
+    "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "as": "GDP_avg",
+          "field": "GDP"
+        }
+      ],
+      "groupby": ["Country", "Status"]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "sort": [{ "field": "GDP_avg", "order": "descending" }]
+    },
+    {
+      "filter": "datum.rank <= 15"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": { "field": "Country", "sort": "-x" },
+        "x": {
+          "field": "GDP_avg",
+          "title": "Average GDP per capita per country",
+          "type": "quantitative"
+        },
+        "color": { "field": "Status" }
+      }
+    }
+  ]
+}
