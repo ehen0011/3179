@@ -17,38 +17,45 @@
         "step": 1,
         "name": "Year: "
       }
-    },
-    {
-      "name": "Country_Status",
-      "value": "Developing",
-      "bind": {
-        "input": "select",
-        "options": ["Developing", "Developed"],
-        "name": "Country Status"
-      }
     }
   ],
-
   "transform": [
     { "filter": "datum.Year == Year_selection" },
-    { "filter": "datum.Schooling > 0" },
-    { "filter": "datum.Status == Country_Status" }
+    { "filter": "datum.Schooling > 0" }
   ],
-  "encoding": {
-    "x": { "field": "Schooling", "type": "quantitative" },
-    "y": { "field": "Life expectancy", "type": "quantitative" },
-    "tooltip": [
-      { "field": "Country", "type": "nominal" },
-      { "field": "Schooling", "type": "quantitative" },
-      { "field": "Life expectancy", "type": "quantitative" }
-    ]
-  },
   "layer": [
-    { "mark": { "type": "circle" } },
     {
-      "mark": { "type": "text", "dy": -10, "color": "orange" },
+      "mark": {
+        "type": "circle"
+      },
+
       "encoding": {
-        "text": { "field": "Life expectancy", "type": "quantitative" }
+        "x": { "field": "Schooling", "type": "quantitative" },
+        "y": { "field": "Life expectancy", "type": "quantitative" },
+        "size": {
+          "field": "GDP",
+          "type": "quantitative",
+          "scale": { "rangeMax": 900 }
+        },
+        "color": { "field": "Status" },
+        "tooltip": [
+          { "field": "Country", "type": "nominal" },
+          { "field": "Schooling", "type": "quantitative" },
+          { "field": "Life expectancy", "type": "quantitative" },
+          { "field": "GDP", "type": "quantitative" }
+        ]
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Life expectancy",
+          "type": "quantitative"
+        },
+        "color": { "value": "red" },
+        "size": { "value": 3 }
       }
     }
   ]
