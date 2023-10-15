@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Embedding Vega-Lite</title>
+    <title>Assignment 2 3179</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
@@ -39,12 +39,20 @@
 
       <h3>Top average gdp Ranking</h3>
       <div id="vis3" class="vis"></div>
+
+      <h4>Developing vs developed</h4>
+      <div id="vis4" class="vis"></div>
+
+      <h5>Life expectancy ranking</h5>
+      <div id="vis5" class="vis"></div>
     </div>
 
     <script type="text/javascript">
-      vegaEmbed("#vis", "week10.json");
+      vegaEmbed("#vis", "World_mapLE.json");
       vegaEmbed("#vis2", "life_expectancy and school.json");
       vegaEmbed("#vis3", "average gpd rank.json");
+      vegaEmbed("#vis4", "developed vs developing.json");
+      vegaEmbed("#vis5", "Life expectancy ranking.json");
     </script>
   </body>
 </html>

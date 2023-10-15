@@ -82,7 +82,8 @@
             "type": "quantitative",
             "title": "Life expectancy"
           },
-          { "field": "Year", "type": "quantitative", "title": "Year" }
+          { "field": "Year", "type": "quantitative", "title": "Year" },
+          { "field": "Status", "type": "nominal", "title": "Status" }
         ]
       }
     }
