@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
   "height": 400,
-  "description": "A scatterplot showing horsepower and miles per gallons that opens a Google search for the car that you click on.",
+  "title": "Correlation between Year of schooling and GDP towards Life expectancy",
   "data": {
     "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
   },
@@ -25,12 +25,13 @@
   ],
   "layer": [
     {
-      "mark": {
-        "type": "circle"
-      },
-
+      "mark": { "type": "circle" },
       "encoding": {
-        "x": { "field": "Schooling", "type": "quantitative" },
+        "x": {
+          "title": "Year of schooling",
+          "field": "Schooling",
+          "type": "quantitative"
+        },
         "y": { "field": "Life expectancy", "type": "quantitative" },
         "size": {
           "field": "GDP",
@@ -50,12 +51,52 @@
       "mark": "rule",
       "encoding": {
         "y": {
+          "title": "Life Expectancy",
           "aggregate": "mean",
           "field": "Life expectancy",
           "type": "quantitative"
         },
-        "color": { "value": "red" },
-        "size": { "value": 3 }
+        "color": { "value": "grey" },
+        "size": { "value": 3 },
+        "tooltip": [
+          {
+            "field": "Life expectancy",
+            "type": "nominal",
+            "aggregate": "mean",
+            "title": "Average Life expectancy",
+            "format": ",.3s"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 20,
+        "dy": 0,
+        "fontSize": 12,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "field": "Country", "type": "nominal" },
+        "color": { "value": "black" },
+        "x": { "field": "Schooling", "type": "quantitative" },
+        "y": { "field": "Life expectancy", "type": "quantitative" },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'China' || datum['Country'] == 'Australia' || datum['Country'] == 'United States of America' || datum['Country'] == 'India'  || datum['Country'] == 'Japan' ||  datum['Country'] == 'Sweden'  || datum['Country'] == 'New Zealand'|| datum['Country'] == 'Indonesia'|| datum['Country'] == 'Malaysia'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal" },
+          { "field": "Schooling", "type": "quantitative" },
+          { "field": "Life expectancy", "type": "quantitative" },
+          { "field": "GDP", "type": "quantitative" }
+        ]
       }
     }
   ]

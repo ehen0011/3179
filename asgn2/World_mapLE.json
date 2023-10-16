@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Life expectancy around the world",
-  "width": 1000,
+  "width": "container",
   "height": 500,
   "params": [
     {

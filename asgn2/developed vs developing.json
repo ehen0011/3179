@@ -1,54 +1,108 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Developing VS developed Life Expectancy",
-  "data": {
-    "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
-  },
-  "transform": [
+  "layer": [
     {
-      "aggregate": [
+      "data": {
+        "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
+      },
+      "transform": [
         {
-          "op": "mean",
-          "as": "Developing AVG",
-          "field": "Life expectancy"
+          "aggregate": [
+            {
+              "op": "mean",
+              "as": "Developing AVG",
+              "field": "Life expectancy"
+            }
+          ],
+          "groupby": ["Status", "Year"]
         }
       ],
-      "groupby": [
-        "Status",
-        "Year"
-      ]
-    }
-  ],
-  "mark": {
-    "type": "line",
-    "point": true
-  },
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "nominal"
-    },
-    "y": {
-      "field": "Developing AVG",
-      "type": "quantitative",
-      "title": "Life expectancy"
-    },
-    "color": {
-      "field": "Status",
-      "type": "nominal"
-    },
-    "tooltip": [
-      {
-        "field": "Developing AVG",
-        "type": "quantitative",
-        "title": "Life expectancy",
-        "format": ",.4s"
+      "mark": {
+        "type": "line",
+        "point": true
       },
-      {
-        "field": "Year",
-        "type": "nominal",
-        "title": "Year"
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Developing AVG",
+          "type": "quantitative",
+          "title": "Life expectancy"
+        },
+        "color": {
+          "field": "Status",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "Developing AVG",
+            "type": "quantitative",
+            "title": "Life expectancy",
+            "format": ",.4s"
+          },
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
+      },
+      "transform": [
+        {
+          "calculate": "{'Developing': 'All', 'Developed': 'All'}[datum.Status]",
+          "as": "Status"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "as": "Developing AVG",
+              "field": "Life expectancy"
+            }
+          ],
+          "groupby": ["Year", "Status"]
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Developing AVG",
+          "type": "quantitative",
+          "title": "Life expectancy"
+        },
+        "color": {
+          "field": "Status",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "Developing AVG",
+            "type": "quantitative",
+            "title": "Life expectancy",
+            "format": ",.4s"
+          },
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year"
+          }
+        ]
+      }
+    }
+  ]
 }

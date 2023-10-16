@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Developing VS developed Average GDP",
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
+      },
+      "transform": [
+        {
+          "aggregate": [
+            { "op": "mean", "as": "Developing AVG", "field": "GDP" }
+          ],
+          "groupby": ["Status", "Year"]
+        }
+      ],
+      "mark": { "type": "area", "point": true },
+      "encoding": {
+        "x": { "field": "Year", "type": "nominal" },
+        "y": {
+          "field": "Developing AVG",
+          "type": "quantitative",
+          "title": "Average GDP"
+        },
+        "color": { "field": "Status", "type": "nominal" },
+        "tooltip": [
+          {
+            "field": "Developing AVG",
+            "type": "quantitative",
+            "title": "Life expectancy",
+            "format": ",.4s"
+          },
+          { "field": "Year", "type": "nominal", "title": "Year" }
+        ]
+      }
+    }
+  ]
+}
