@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "title": "Developing VS developed Average GDP",
+  "title": "Developing VS developed countries immunization against Diptheria (%)",
   "layer": [
     {
       "data": {
@@ -10,26 +10,26 @@
       "transform": [
         {
           "aggregate": [
-            { "op": "mean", "as": "Developing AVG", "field": "GDP" }
+            { "op": "mean", "as": "Diphtheria AVG", "field": "Diphtheria" }
           ],
           "groupby": ["Status", "Year"]
         }
       ],
-      "mark": { "type": "area", "point": true },
+      "mark": { "type": "line", "point": true },
       "encoding": {
         "x": { "field": "Year", "type": "nominal" },
         "y": {
-          "field": "Developing AVG",
+          "field": "Diphtheria AVG",
           "type": "quantitative",
-          "title": "Average GDP"
+          "title": "Immunized children (%) "
         },
         "color": { "field": "Status", "type": "nominal" },
         "tooltip": [
           {
-            "field": "Developing AVG",
+            "field": "Diphtheria AVG",
             "type": "quantitative",
-            "title": "Life expectancy",
-            "format": ",.4s"
+            "title": "immunized Children (%)",
+            "format": ",.3s"
           },
           { "field": "Year", "type": "nominal", "title": "Year" }
         ]
