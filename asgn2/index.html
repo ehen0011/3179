@@ -31,6 +31,19 @@
         padding: 2rem;
       }
 
+      .title-info {
+        color: black;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .end-info {
+        margin-top: 0.5rem;
+        border-radius: 8px;
+        color: black;
+        padding: 2rem;
+      }
+
       .vis {
         width: 100%;
         height: 400px;
@@ -39,136 +52,235 @@
   </head>
   <body class="bg-secondary">
     <div class="container p-4 bg-white">
+      <h1 class="text-center">Factors for Human longevity</h1>
       <h1 class="text-center">
-        Factors for Human longevity </h1>
-      <h1 class="text-center">
-        (An In-Depth Visualization that reveals factors for Prolonged Living) </h1>
-        
-        <div class ="main-info">
-          <p class="text-center">Over the year, the <b>life expectancy </b>of a human has been increasing at a steady pace. From the early year of 2000 at 67 years old to the year 2015 at 72 years old which mean that human on average is living 5 years longer. This might be due to <b> access to education, better access to medical technology, better socioeconomic situation</b> for the induvial, and an overall <b>richer quality of life</b> to its prior decade. </p>
-          <p class="text-center">The following visualisation present data which are collected over the past decade detailing each country <b> life expectancy, economy, percentage of vaccination </b> against disease, and the overall <b>wellbeing</b> of the country. This visualisation hope to find a certain correlation between certain factors and hope to conclude which factor would lead to human life longetivity. </p>
+        (An In-Depth Visualization that reveals factors for Prolonged Living)
+      </h1>
 
-
-
-        </div>
-
-        
-        <div class="section-info">
-          <h2>World Map</h2>
-          <div id="vis" class="vis mt-5"></div>
-          <p class="mt-3 text-center">
-            The map visualisation displays the average life expectancy in a country on that particular year. The colour Saturation on each country shows how much the average life expectancy is for its populace and the darker it is the higher the life expectancy. Beneath the map there is a slider to show the change of life expectancy for each country over time.
-          </p>
-          <p class="text-center">
-            On average, those that lives on the continent of North America, Australia, and Europe has a much deeper saturation of colour than other countries. This is because these categories of continent are considered a developed nation. As Miladinov (2020) stated, the increased economic development, higher living standard, and improved health is still a relevant factor for a prolonged life. Due to that most developed nation on average would have higher life expectancy due to this factor. </p>
-            <p class="text-center">However, there are some anomaly such as Chille where it has the life expectancy usually found in a developing nation. Due to this we would look in-depth on what the difference is between developed nation and developing nation to find out more factor that affect the life expectancy of each country</p>
+      <div class="main-info">
+        <p class="text-center">
+          Over the year, the <b>life expectancy </b>of a human has been
+          increasing at a steady pace. From the early year of 2000 at 67 years
+          old to the year 2015 at 72 years old which mean that human on average
+          is living 5 years longer. This might be due to
+          <b>
+            access to education, better access to medical technology, better
+            socioeconomic situation</b
+          >
+          for the induvial, and an overall <b>richer quality of life</b> to its
+          prior decade.
+        </p>
+        <p class="text-center">
+          The following visualisation present data which are collected over the
+          past decade detailing each country
+          <b> life expectancy, economy, percentage of vaccination </b> against
+          disease, and the overall <b>wellbeing</b> of the country. This
+          visualisation hope to find a certain correlation between certain
+          factors and hope to conclude which factor would lead to human life
+          longetivity.
+        </p>
       </div>
-      
-      <div class="section-info">
-        <h2>developing VS developed country</h2>
-        <div id="vis4" class="vis text-center"></div>
-        <p class="text-center">As the visualisation discussed above, the difference between a developing country and a developed countries life expectancies stems from many factor. factor such as economic development, higher living standard and improved health, due to that this section wishes to see the difference more in depth to see the difference between the two statuses.</p>
-        <div class="row">
 
+      <div class="section-info">
+        <h2 class="title-info">World Map</h2>
+        <div id="vis" class="vis"></div>
+        <p class="mt-3 text-center">
+          The map visualisation displays the average life expectancy in a
+          country on that particular year. The colour Saturation on each country
+          shows how much the average life expectancy is for its populace and the
+          darker it is the higher the life expectancy. Beneath the map there is
+          a slider to show the change of life expectancy for each country over
+          time.
+        </p>
+        <p class="text-center">
+          On average, those that lives on the continent of North America,
+          Australia, and Europe has a much deeper saturation of colour than
+          other countries. This is because these categories of continent are
+          considered a developed nation. As Miladinov (2020) stated, the
+          increased economic development, higher living standard, and improved
+          health is still a relevant factor for a prolonged life. Due to that
+          most developed nation on average would have higher life expectancy due
+          to this factor.
+        </p>
+        <p class="text-center">
+          However, there are some anomaly such as Chille where it has the life
+          expectancy usually found in a developing nation. Due to this we would
+          look in-depth on what the difference is between developed nation and
+          developing nation to find out more factor that affect the life
+          expectancy of each country
+        </p>
+      </div>
+
+      <div class="section-info">
+        <h2 class="title-info">Developing VS Developed country</h2>
+        <div id="vis4" class="vis text-center"></div>
+        <p class="text-center">
+          As the visualisation discussed above, the difference between a
+          developing country and a developed countries life expectancies stems
+          from many factor. factor such as economic development, higher living
+          standard and improved health, due to that this section wishes to see
+          the difference more in depth to see the difference between the two
+          statuses.
+        </p>
+        <div class="row">
           <div class="col">
-            <div id="vis6" class="vis">
-            </div>
-              
+            <div id="vis6" class="vis"></div>
           </div>
           <div class="col">
             <div id="vis7" class="vis"></div>
-              
           </div>
-
         </div>
 
         <div class="row">
-
           <div class="col">
             <div id="vis8" class="vis"></div>
-              
           </div>
           <div class="col">
             <div id="vis9" class="vis"></div>
-              
           </div>
-
-
-
         </div>
         <div id="vis10" class="vis text-center"></div>
 
-
-        <p class="mt-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt amet
+        <p class="text-center">
+          from the 5 visualisation above, there are key things which are present
+          from all this. the developed country are always in a much better
+          overall health situation and their economic development compare to
+          their developing rival. all the chart indicate that a developed
+          country are more likely to immunize their children from a young age
+          toward a life threathening disease. this indicates that they have a
+          much better healthcare system compare to Developing country.
+        </p>
+        <p class="text-center">
+          Moreover, if we were to look at the chart which show the average GDP
+          for developing and developed country, we could see the growth of each
+          status year by year. in all the data presented, an average developing
+          country has more than twice as much GDP compare to a developing
+          country. due to this we could conclude that a developed country has a
+          much better economic development than a developing one.
+        </p>
+        <p class="text-center">
+          This comparision has a much broader classificatation due to grouping
+          each country based on their status. To see a more in-depth of this
+          theory, we would need to look at the top percentile in their
+          respective field and see how much developed country is there and how
+          many developing country is there.
         </p>
       </div>
-      
-
-
 
       <div class="section-info">
-        <h3>Ranking</h3>
+        <h3 class="title-info">Ranking</h3>
         <div class="row">
           <div class="col">
             <div>
               <div id="vis3" class="vis"></div>
-              <div id="vis-baru" class="vis"></div>
             </div>
           </div>
           <div class="col">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-              dignissimos illum praesentium alias quae nam rerum cupiditate
-              sequi ab, officiis corporis veritatis corrupti omnis vel, vitae
-              impedit temporibus exercitationem unde est modi obcaecati at!
-              Necessitatibus nostrum vero consectetur nobis optio dignissimos
-              nesciunt iste nemo illo ipsam, soluta accusamus unde aperiam
-              cumque rerum placeat voluptas pariatur amet ducimus, possimus rem
-              architecto explicabo vitae. Consectetur dolor molestiae ipsum modi
-              nihil doloribus veniam eligendi accusantium quidem repudiandae
-              quibusdam tempore eveniet quod recusandae voluptatem beatae libero
-              eum numquam ducimus unde itaque, a praesentium? Quaerat voluptas
-              aperiam sed. Illum illo, voluptates aspernatur id reprehenderit
-              repellat.
+              In this Bar chart, we are presented with the visualisation which
+              shows the top 15 countries with the highest average GDP. in this
+              bar chart, we get to see that the majority of the countries here
+              are considered a developed country. 11 out of the 15 here belong
+              to that classification while the other 4 are considered a
+              developing countries.
+            </p>
+            <p>
+              However, based off this graph, we could see that just because one
+              is considered a developing country, it doesn't mean that their GDP
+              would be considered low.from here we would try to find whether
+              status affect Life expectancies.
             </p>
           </div>
-          
+        </div>
+
+        <div class="row">
           <div class="col">
-            <p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab et sunt alias. Quis, doloremque autem sint molestias ea accusamus odio voluptatibus voluptates placeat dolorum delectus tempora facilis quos perferendis deleniti ratione impedit officiis inventore exercitationem distinctio animi at nobis?</p></p>
+            <div>
+              <div id="vis5" class="vis"></div>
+            </div>
+          </div>
+          <div class="col">
+            <p>
+              Based off this bar chart, we also came to the same conclusion with
+              GDP, there the majority of countries in this top 20 list were a
+              developed countries. 15 countries are considered a developed
+              countries while the rest are a developing countries. The highest
+              average Life expectancy in this list is Japan with a life
+              expectancy of 82.54.
+            </p>
+            <p>
+              We arrived at the same conclusion that Status alone does not
+              affect life expectancy but is a combination of many things. as
+              we'd seen, a developing countries is in a top 5 spot for the
+              highest life expectancies ranking.
+            </p>
           </div>
         </div>
-        
+
+        <p class="text-center">
+          Based off the ranking chart above, we we conclude that status doesn't
+          fully conclude for the countries poor life expectancies, but it is a
+          result of a combination of many things. We would need to see a
+          correlation between GDP, and life expectancies on the next section to
+          see what truly made a country with poor life expectancies.
+        </p>
       </div>
 
       <div class="section-info">
-        <h2>Factors</h2>
+        <h2 class="title-info">Factors</h2>
         <div id="vis2" class="vis mt-4"></div>
-
-        <div id="vis5" class="vis"></div>
-
+        <p class="text-center">
+          This chart aims to find a correlation between the Life expectancy,
+          GDP, and Year of schooling for each country over a period from 2000
+          and 2015. based off this chart, we could draw a conclusion that as the
+          life expectancy gone up, there is an increased of the bubble size
+          which use the field GDP for it's size. Due to that we could conclude
+          that a better economic status would lead to a higher life expectancy.
+        </p>
+        <p class="text-center">
+          Moreover, the chart also uses the year of schooling as another field
+          to find another correlation towards the increase of life expectancy.
+          From the graph we could see that as the average populace become more
+          educated, their life expectancies increases and the size of the bubble
+          which encapsulates the GDP of that country increases, we could then
+          conclude that year of schooling is another factor which positively
+          impact life expectancy and GDP. this is most likely due to as the
+          average people become more educated, they are now able to secure a
+          better life due to their newly aquired skill which they could apply
+          towards a new job. due to this, they are also able to afford a better
+          healthcare for themselves which result in a longer life for them.
+        </p>
       </div>
 
-
-    <div class ="main-info">
-      <h4 class ="text-center">Conclusion</h4>
-      <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, tenetur!</p>
-    </div>
+      <div class="main-info">
+        <h4 class="text-center">Conclusion</h4>
+        <p class="text-center">
+          From all the chart discussed above, we have seen what type of factor
+          would result in human longetivity. better economic status and better
+          healthcare would lead human to live a longer life. A Country Status
+          also doesn't affect the life expectancy of a human. most developing
+          country have a much lower life expectancy due to a developing status
+          having a negative correlation with GDP.
+        </p>
+      </div>
 
       <div>
-        <h4 class="text-center"> Visualisation done by Edrick Hendri</h4>
+        <h4 class="end-info text-center">Visualisation by Edrick Hendri</h4>
         <a>Dataset:</a>
-        <a href="https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy"> Link</a>
-
+        <a
+          href="https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy"
+        >
+          Link</a
+        >
       </div>
     </div>
-    
+
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
     ></script>
-    
+
     <script type="text/javascript">
       vegaEmbed("#vis", "World_mapLE.json");
       vegaEmbed("#vis2", "life_expectancy and school.json");
@@ -181,7 +293,6 @@
       vegaEmbed("#vis8", "Diptheria.json");
       vegaEmbed("#vis9", "Polio.json");
       vegaEmbed("#vis10", "Hepatitis.json");
-
     </script>
   </body>
 </html>

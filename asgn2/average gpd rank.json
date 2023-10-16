@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 450,
+  "title": "Top 15 Country with the highest average GDP",
   "description": "A scatterplot showing horsepower and miles per gallons that opens a Google search for the car that you click on.",
-  "height": { "step": 17 },
+  "height": { "step": 20 },
   "data": {
     "url": "https://raw.githubusercontent.com/ehen0011/3179/main/Week9%20HW/Data/life_expectancy.csv"
   },
