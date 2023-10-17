@@ -28,7 +28,7 @@
           {
             "field": "Developing AVG",
             "type": "quantitative",
-            "title": "Life expectancy",
+            "title": "GDP",
             "format": ",.4s"
           },
           { "field": "Year", "type": "nominal", "title": "Year" }
